@@ -14,7 +14,7 @@ function App() {
     const handleDownload = async () => {
         setError('');
         try {
-            const response = await axios.post("http://localhost:5000/api/download", { videoUrl });
+            const response = await axios.post("https://instadownloader-1.onrender.com/api/download", { videoUrl });
             if (response.data && response.data.download_url) {
                 setDownloadLink(response.data.download_url);
             } else {
